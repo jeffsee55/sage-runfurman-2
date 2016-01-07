@@ -1,0 +1,13 @@
+footer.jumbotron {
+  margin-bottom: 0;
+
+  .footer-column {
+    @include make-sm-column(4);
+    @include center-block();
+    text-align: center;
+
+    .textwidget {
+      text-align: justify;
+    }
+  }
+}

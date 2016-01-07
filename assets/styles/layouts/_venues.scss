@@ -1,0 +1,16 @@
+.venue-img {
+  @include make-sm-column(6);
+  padding: 1em;
+}
+
+.venue-description {
+  @include make-sm-column(6);
+}
+
+.carousel-inner {
+
+  img {
+    width: 100%;
+  }
+}
+

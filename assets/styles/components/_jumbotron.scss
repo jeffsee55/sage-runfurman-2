@@ -1,0 +1,99 @@
+.jumbotron { 
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+
+  .overlay {
+    position: absolute;
+    top: 0; right: 0; left:0; bottom: 0;
+    z-index: 10;
+
+    @include gradient-horizontal(transparentize(darken($brand-primary, 15),0.5),transparentize($blue, 0.7), 0%, 100%);
+  }
+
+}
+
+.jumbotron-main {
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+
+
+  @media (max-width: $screen-sm-max) {
+    min-height: 300px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 11;
+
+    @media (min-width: $screen-sm-min) {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.home .jumbotron-main {
+  background-position: right center;
+}
+
+.jumbotron-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &:first-child {
+
+    @media (min-width: $screen-sm-min) {
+      margin-right: 30px;
+    }
+  }
+
+
+  .img {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    display: block;
+
+    .img {
+      @include center-block();
+      max-width: 300px;
+    }
+  }
+}
+
+.jumbotron-sponsors {
+  display: block;
+  width: 300px;
+  @include center-block();
+
+  .sponsor-slot {
+    padding: 1em;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    display: flex;
+    align-content: center;
+    width: auto;
+  }
+}
+

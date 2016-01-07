@@ -1,0 +1,39 @@
+.author-image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 128px;
+
+  img {
+    width: 100%;
+  }
+
+
+  @media (max-width: $screen-sm-max) {
+    width: 64px;
+    height: 64px;
+
+    h1 {
+      margin-top: 10px;
+    }
+
+    img {
+      height: auto;
+    }
+  }
+}
+
+.author-image-small {
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin-right: 1em;
+  margin-top: 0.25em;
+}
+
+.author-bio {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #333;
+}
+

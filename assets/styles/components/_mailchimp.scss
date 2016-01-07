@@ -1,0 +1,44 @@
+.yks-mailchimpFormContainer {
+  background: none !important;
+  padding: 0 !important;
+
+  .yks-mailchimpFormDivRow {
+    @include clearfix();
+
+    .yks-mailchimpFormDivRowLabel {
+      @include make-xs-column(3);
+      white-space: nowrap;
+      padding-left: 0;
+    }
+    .yks-mailchimpFormDivRowField {
+      
+      input {
+        @include make-xs-column(9);
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        color: #585858;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+      }
+    }
+
+    .ykfmc-submit {
+      @include button-size(0.5em, 1em, 16px, 1, 3px);
+      border: none;
+
+      &:hover {
+        background-color: darken($brand-primary, 10) !important;
+      }
+    }
+  }
+}

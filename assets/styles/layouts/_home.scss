@@ -1,0 +1,85 @@
+.announcement-well {
+  background: none;
+  @include clearfix();
+  position: relative;
+
+  .announcement-tag {
+    position: absolute;
+    top: -20px;
+    z-index: 100;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    right: -10px;
+    background: $brand-primary;
+    color: white;
+    padding: 0.5em 2em;
+    font-size: 1.2em;
+    -webkit-box-shadow: -2px 5px 13px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 5px 13px -2px rgba(0,0,0,0.75);
+    box-shadow: -2px 5px 13px -2px rgba(0,0,0,0.75);
+
+    @media (min-width: $screen-sm-min) {
+    }
+  }
+
+  li {
+
+    .announcement-img {
+      @include make-sm-column(3);
+    }
+    .announcement-text {
+      @include make-sm-column(9);
+    }
+  }
+}
+
+.jumbotron-ads {
+
+  @media (min-width: $screen-sm-min) {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .jumbotron-banner {
+    border-radius: 0px;
+  }
+}
+
+.carousel-inner {
+
+  .carousel-caption {
+    position: relative;
+  }
+
+  iframe, #player {
+    @include center-block();
+    width: 300px;
+    height: 300px;
+    padding-top: 2em;
+
+    @media (min-width: $screen-sm-min) {
+      width: 500px;
+    }
+  }
+
+  h4 {
+    text-align: center;
+  }
+}
+
+.carousel-control {
+  bottom: 80px;
+
+  @media (min-width: $screen-sm-min) {
+    bottom: 0px;
+  }
+}
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none;
+
+  span {
+    color: $brand-primary;
+  }
+}
