@@ -3,12 +3,13 @@
 <?php
   if(has_post_thumbnail()) {
     $thumb_id = get_post_thumbnail_id();
-    $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+    $thumb = wp_get_attachment_image_src($thumb_id,'original', true);
+    $thumb_url = $thumb[0];
   } else {
-    $thumb_url[0] = "http://localhost:8888/runfurman/wp-content/uploads/2014/01/jumbo-belltower.jpg";
+    $thumb_url = "http://localhost:8888/runfurman/wp-content/uploads/2014/01/jumbo-belltower.jpg";
   }
 ?>
-<div class="page-header jumbotron jumbotron-main" style='background-image: url("<?php echo $thumb_url[0]; ?>")'>
+<div class="page-header jumbotron jumbotron-main parallax-window" data-parallax="scroll" data-image-src="<?php echo $thumb_url; ?>">
   <div class="overlay"></div>
   <div class="container">
     <?php if ( is_author() ) { ?>
